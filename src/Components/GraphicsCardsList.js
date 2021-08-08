@@ -1,8 +1,10 @@
 import GraphicsCard from './GraphicsCard';
 
 const GraphicsCardsList = (props) => {
-    return (
+  let noMatchText = (props.searchedValue) ? <span style={{color: 'darkred'}}>No match found for {props.searchedValue}</span> :"";
+  return (
       <section className="graphicsCardList">
+        {noMatchText}
         {props.theList.map( gc => {
           return <GraphicsCard key={gc.id} {...gc} />;
         })}

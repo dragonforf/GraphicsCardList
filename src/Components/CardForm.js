@@ -18,7 +18,7 @@ export const CardForm = (props) => {
                 onChange={(event) => setState({valueToSearch: event.target.value})}
                 value={state.valueToSearch}
                 placeholder="Enter a graphics card name..." />
-            <input type="submit" />
+            <input type="submit" value="Search graphic card"/>
         </form>
     </>
     );
